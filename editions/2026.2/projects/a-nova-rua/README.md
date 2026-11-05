@@ -48,7 +48,7 @@ Estatisticamente, esse é o grupo etário mais vulnerável aos golpes mencionado
 Durante a apresentação, serão feitas perguntas ao público, os quais
 Assim, busca-se desenvolver os quatro tópicos levantados no questionário de modo que os integrantes da atividade possam compartilhar suas experiências.
 
-Dedicaremos 10 minutos após a apresentação para o preenchimento das questões do formulário ligados aos tópicos desenvolvidos durante a oficina. As perguntas serão majoritariamente fechadas e exigirão pensamento crítico do participante. Abaixo estão os tópicos de cada pergunta, as quais são descritas mais detalhadamente em [guia-de-questoes.md](guia-de-questoes.md):
+Dedicaremos 10 minutos após a apresentação para o preenchimento das questões do formulário ligados aos tópicos desenvolvidos durante a oficina. As perguntas serão majoritariamente fechadas e exigirão pensamento crítico do participante. Abaixo estão os tópicos de cada pergunta, as quais são descritas mais detalhadamente em [guia-de-questoes.md](./formularios/guia-de-questoes.md):
 
 - Meios seguros de compras pela Internet;
 - Identificar indícios que um site de varejo seja falso;
@@ -124,11 +124,11 @@ Caso a parceria com UniversIDADE não seja confirmada, será necessário recorre
    - Arquivo: [Oficina-ciberseguranca.pdf](Oficina-cirberseguranca.pdf);
    - Canva: [Oficina de Cibersegurança](https://canva.link/9e1sunoia5bolkj);
 - Formulário de questões.
-   - Arquivo: [Formulario-questoes.pdf](Formulario-questoes.pdf);
+   - Arquivo: [Formulario-questoes.pdf](./formularios/Formulario-questoes.pdf);
    - Canva: [Questionário](https://canva.link/oy26cn72eb9ujvb);
-- Guia de questões: [guia-de-questoes.md](guia-de-questoes.md);
+- Guia de questões: [guia-de-questoes.md](./formularios/guia-de-questoes.md);
 - Formulário de Feedback.
-   - Arquivo: [Formulario-feedback.pdf](Formulario-questoes.pdf);
+   - Arquivo: [Formulario-feedback.pdf](./formularios/Formulario-feedback.pdf);
    - Canva: [Feedback](https://canva.link/rxdc3ozg4wrwfid);
 
 ### Recursos para a Aplicação
