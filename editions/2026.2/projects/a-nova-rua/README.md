@@ -173,42 +173,119 @@ Caso a parceria com UniversIDADE não seja confirmada, será necessário recorre
 
 ### Contexto da Aplicação
 
-> Registre apenas as informações necessárias para compreender a atividade realizada. Não inclua dados pessoais dos participantes ou contatos individuais.
 
-- **Data ou período:** `<...>`
-- **Local/contexto:** `<...>`
-- **Público atendido:** `<...>`
-- **Número aproximado de participantes:** `<...>`
-- **Duração efetiva:** `<...>`
+- **Data ou período:** 16/10/2026, das 15h às 16h
+- **Local/contexto:** Auditório do IMECC.
+- **Público atendido:** 60+
+- **Número aproximado de participantes:** 4
+- **Duração efetiva:** 1h10min
 
 ### O que Aconteceu e o que Aprendemos
 
-> Faça uma análise breve, mas concreta. Compare a experiência com o roteiro e os objetivos planejados. Indique o que funcionou bem, o que não funcionou e o que surpreendeu o grupo. Evite apenas afirmar que “foi um sucesso”: dê exemplos ou evidências.
 
-`<Relato analítico da primeira aplicação.>`
+   A oficina foi realizada com 4 participantes, sendo 3 deles inscritos e 1 acompanhante. Esse número está abaixo do esperado e a sua principal causa foi o adiamento da sua divulgação pelo UniversIDADE. Isso ocorreu pois a diretoria do IMECC alterou a reserva da sala 221 para o auditório no dia 13/10/2026, logo o material de divulgação teve que ser reformulado.
+
+   Apesar disso, a oficina em si não foi prejudicada pela mudança de sala: o auditório possui mais espaço, possui mais equipamentos e é mais próximo da entrada do IMECC, tornando-o mais fácil de encontrar. Ainda sim, ela começou com 15 minutos de atraso: 2 participantes chegaram atrasados e foi necessário guiá-los ao auditório.
+
+   Iniciada a oficina, a apresentação em slides durou 40 minutos (considerado um tempo razoável pelos participantes). Os participantes foram bem conversativos tanto entre si quanto com os apresentadores, de modo que suas observações também foram úteis para que possamos aprimorar a disciplina. Um comentário notável de um participante foi a sugestão sobre o uso de cartões virtuais em compras online, algo será adicionado à segunda realização. Acredita-se que a escolha de trazer relatos pessoais de parentes que sofreram golpes também tenha ajudado a capturar a empatia dos participantes. Aqui concluímos que a apresentação foi capaz de estimular o interesse e a discussão por parte dos participantes em cibersegurança.
+
+   Finalizada a apresentação, os formulários foram preenchidos no tempo estipulado (15 minutos). No momento, foi permito assinalar mais de uma alternativa em cada questão, o que não será repetido na segunda aplicação. Decisão tomada pois, além de tornar a análise das respostas mais complicada, acredita-se que isso prejudique a observação das nuâncias que tornavam uma alternativa mais segura que a outra. Pelo mesmo motivo, não discutir as respostas dos formulários foi considerado um erro, pois isso poderia corrigir as respostas incorretas do questionário que observamos posteriormente. Ainda sim, a maioria das repostas estavam corretas, logo a apresentação em grande parte foi capaz de transmitir o que pretendiámos.
+
+   Por fim, foram entregues cada das três cartilhas do CERT.br aos participante, as quais foram muito bem recebidas. Embora a função das cartilhas seja como um brinde pela participação, consideramos que seja importante levar ao público o papel do orgão na cibersegurança brasileira de modo mais aprofundado. Planeja-se, portanto, incorporar dados sobre o CERTIC na apresentação e durante a entrega.
 
 ### Evidências e Feedback
 
-> Apresente os principais resultados obtidos com os instrumentos previstos na E2, como respostas, observações, produções dos participantes ou feedback. Quando possível, informe quantas pessoas responderam. Diferencie observações, opiniões e conclusões; registre limitações da coleta. Não publique respostas identificáveis ou imagens sem autorização.
+Na pasta [aplicacao-1](./aplicacao-1/) encontram-se:
+- O registro por foto de todos os formulários preenchidos (sem identificação);
+- A versão utilizada dos slides;
+- Uma tabela com os dados coletados ([resposta.csv](./aplicacao-1/respostas.csv));
+- As provas de realização da oficina e entrega das cartilhas ([aplicacao-1/registros](./aplicacao-1/registros/));
+- Os gráficos gerados com os dados coletados ( [aplicacao-1/dados](./aplicacao-1/dados/)).
 
-`<Principais evidências, interpretação e limitações. Inclua links para materiais ou resultados anonimizados, quando pertinente.>`
+Caso seja desejável, o script [app.py](./aplicacao-1/app.py) cria um dashboard com uma visualização aprimorada dos gráficos e da tabela. Para executá-lo no terminal (Unix), crie um ambiente virtual python na pasta do projeto e instale as dependências necessárias
+
+```sh
+python -m venv .venv
+python -m pip install -r requirements.txt
+```
+Em seguida, execute o código no terminal
+```sh
+python ./aplicacao-1/app.py
+```
+e digite a URL http://127.0.0.1:8050/ no navegador para visualizar o dashboard.
+
+#### Formulário de Questões
+
+Apresentam-se abaixo os gráficos com a quantidade de respostas para cada questão, as quais serão analisadas com base no [guia-de-questoes.md](./formularios/guia-de-questoes.md). Repare que a soma das respostas pode ser maior que 4 pois alguns participantes assinalaram mais de uma letra por questão.
+
+![Q1](/editions/2026.2/projects/a-nova-rua/aplicacao-1/dados/Q1.png)
+![Q2](/editions/2026.2/projects/a-nova-rua/aplicacao-1/dados/Q2.png)
+![Q3](/editions/2026.2/projects/a-nova-rua/aplicacao-1/dados/Q3.png)
+![Q4](/editions/2026.2/projects/a-nova-rua/aplicacao-1/dados/Q4.png)
+![Acertos](/editions/2026.2/projects/a-nova-rua/aplicacao-1/dados/respostas-corretas-por-questao.png)
+
+Nesse último gráfico, uma resposta foi considerada correta desde que uma das alternativas assinaladas seja a esperada.
+
+| Questão| Observação |
+| --- | --- |
+| Q1. (Compras pela Internet) | Todos os participantes assinalaram a alternativa mais segura. Um participante respondeu c), a qual é aceitável se estiver acompanhada com d) |
+| Q2. Site da Americanas | 3 dos 4 participantes identificaram que a página era falsa pelo link do site apresentado pela imagem. Um deles, entretanto, afirmou que confiaria na página pois a identidade visual se assemelha à da loja física.|
+| Q3. Contato Familiar | Considerada a mais difícil, a) e b) são aceitáveis. A c) poderia ser correta caso fosse mencionado apenas videochamadas. Felizmente, ninguém assinalou d).|
+| Q4. Cartão Clonado?| Todas as respostas estão corretas. As alternativas incorretas são bem similares, o que pode ter ajudado os participantes.|
+
+No geral, podemos ver que a maioria dos tópicos centrais tratados na apresentação (identificação de links falsos, uso de canais oficiais de instituições, etc.) se refletiram nas respostas. Na Q2, será benéfico incluir na apresentação que a identidade visual site não é garantia de confiabilidade. Já na Q3, acredita-se que discutir as respostas após o preenchimento pode ajudar o público a compreenderem as nuâncias das três abordagens.
+
+#### Formulário de Feedback
+
+| Feedback | Concordo totalmente | Concordo| Indiferente| Discordo| Discordo totalmente|
+| --- | --- | --- |--- |--- |--- |
+| Sinto-me mais preparado(a) e desconfiado(a) na internet | 3 | 1 | 0 | 0 | 0 |
+| Aprendi algo de novo | 4 | 0 | 0 | 0 | 0 |
+| O tema deve ser mais discutido com pessoas da minha faixa etária | 4 | 0 | 0 | 0 | 0 |
+| A apresentação foi fácil de entender | 4 | 0 | 0 | 0 | 0 |
+| O evento cumpriu as suas expectativas | 4 | 0 | 0 | 0 | 0 |
+| A duração total do evento foi adequada | 3 | 1 | 0 | 0 | 0 |
+
+3 dos 4 participantes preencheram o campo livre, todos com comentários positivos. Conclui-se pelo feedback que as principais preocupações técnicas sobre a oficina (como tempo de duração)
+
+#### Limitações
+- A amostra é muito pequena, logo os dados podem não avaliar a oficina precisamente.
+- Não foi realizado um pre-teste, logo é possível que algum conhecimento avaliado já era conhecimento prévio do participante.
+- Não foi possível verificar a eficiência da divulgação em razão do baixo número de inscritos.
+- Embora o tempo de duração tenha sido razoável, ele ainda depende da participação do público. É possível que a sua duração seja maior para públicos maiores.
 
 ## Plano de Aprimoramento para a Segunda Aplicação
 
-> A segunda aplicação deve incorporar aprendizados da primeira. Indique as mudanças mais importantes, sua justificativa e o efeito esperado. Não é necessário propor mudanças artificiais quando algo funcionou bem.
-
 | Evidência ou dificuldade observada | Ajuste proposto | Resultado esperado |
 | --- | --- | --- |
-| `<O que foi observado>` | `<O que será modificado>` | `<O que se espera melhorar>` |
-| `<O que foi observado>` | `<O que será modificado>` | `<O que se espera melhorar>` |
+| Poucos participantes |Ampliar os canais de divulgação, buscando redes de conexão com conhecidos e colegas de classe: solicitar a terceiros que divulguem a atividade em grupos com grande concentração de nosso público-alvo; realizar a divulgação em associações de bairro, condomínios e demais canais do UniversIDADE, bem como nas redes sociais da FEEC; busca-se incentivar os participantes a trazerem um conhecido para participar da atividade. Também pretede-se iniciar a divulgação com mais antecedência.| Aumentar o número de participantes, gerando uma base dados maior para análise posterior.|
+| Falta de acompanhamento e mudanças de reserva | Será criado um grupo de Whatsapp, o qual estará presente em todos os meios de divulgação, pelo qual os inscritos serão notificados em caso de mudança de local ou horário. | Tornar a aplicação mais robusta a mudanças na reserva e reduzir o índice de não comparecimento.  |
+| Dificuldade para encontrar o auditório. | Será gravado um vídeo com instruções de como chegar ao local que será enviado pelo grupo de Whatsapp; na data da oficina, serão postos panfletos nas facilidades do IMECC para guiarem os participam| Espera-se que os participantes consigam encontrar facilmente o ambiente da atividade, diminuindo atrasos. |
+| Falta de indicadores sobre a efetividade dos canais de divulgação | Incluir no formulário de inscrição uma pergunta sobre como o participante conheceu a atividade.| Identificar os canais de divulgação com mais alcance para o público 60+.|
+| Evidência limitada para a prestação de contas ao CERT.br.|Incluir tópico sobre a autorização para o uso de imagem no formulário de inscrição.| Registro fotográfico mais amplo do evento.|
+|Falta de dicussão sobre as questões após preechimento dos formulários| Serão incluidos slides no final com as questões e as alternativas corretas.| Garantir que as orientações corretas tenham sido transmitidas ao público mesmo se as respostas estiverem erradas.|
+
 
 ### Preparação da Segunda Aplicação
 
-> Atualize **nas seções já existentes do README** o roteiro, os materiais, os testes, os responsáveis, a articulação com o público e os indicadores de avaliação que tenham mudado. Aqui, registre somente as pendências ou decisões mais importantes para a próxima aplicação.
+- **Situação da segunda aplicação:** Divulgação realizada pela UniversIDADE e pelos grupos de Whatsapp obtiveram 23 inscrições. A oficina possui reserva para o auditório do IMECC às 15h00 do dia 13/11/2026. Todos os inscritos foram instruidos a chegar ao local pelo grupo de Whatsapp.
 
-- **Situação da segunda aplicação:** `<contexto/período previsto e o que já está encaminhado>`
-- **Pendências prioritárias:** `<o que falta concluir ou confirmar>`
-- **Como verificaremos as melhorias:** `<que evidências serão observadas ou coletadas>`
+| Entregável / Resultado | Tarefa | Responsável(is) | Prazo | Situação |
+| --- | --- | --- | --- | --- |
+|Sala Reservada | Reservar o auditório do IMECC. | Vitor | 12/10 | Concluída|
+|Inscrição| Atualizar Google Forms com o novo grupo do Whatsapp| Vitor | 05/10 |Concluída|
+|Orientações de chegada ao local| Gravar vídeo de como chegar à sala reservada| Maria Eduarda | 11/10 |Concluída|
+| Apresentação em Slides e Formulários | Adicionar dados do CERT.br e discussão sobre as questões no final. | Paulo | 09/10 | Concluída |
+| Teste da oficina | Verificar condições da sala, tempo de duração e possíveis adaptações. | Todos | 12/10 | Concluída |
+
+   O material dos slides e dos formulários foi reimpresso, uma vez que ele foi adaptado em razão das mudanças da segunda aplicação.
+- **Pendências prioritárias:** Não há.
+- **Como verificaremos as melhorias:** 
+   - Aumento no número de pessoas; 
+   - Coerência entre o número de inscrições e o de pessoas presentes;
+   - Será perguntado se houve dificuldades em chegar ao local;
+   - Mais registros fotográficos da oficina;
+   - Maior coleta de respostas dos formulários permitirá uma melhor avaliação da qualidade da oficina. 
 
 ## Referências
 
